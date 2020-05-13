@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/layout/header'
 import Image from '../../assets/japannight.jpeg';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const styles = {
     paperContainer: {
@@ -18,10 +19,18 @@ const styles = {
 function Homepage(){
     return(
         <React.Fragment>
-
             <Paper style={styles.paperContainer}>
             <Header />
-               <p> Developer </p>
+            <Grid container>
+                <Grid item>
+                    <h5> Developer </h5>
+                </Grid>
+                <Grid item>
+                    <div>
+                        <h3>HEE</h3>
+                    </div>
+                </Grid>
+            </Grid>
             </Paper>
             <div>
                 <h1>Hello boi</h1>
@@ -31,3 +40,5 @@ function Homepage(){
 }
 
 export default Homepage;
+
+// justify="space-between"

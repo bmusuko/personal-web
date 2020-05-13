@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: -12,    
     },
     rightToolbar: {
-        marginLeft: 'auto',
         color:"#f5f5f5",
+        marginRight:24,
         fontWeight:"bolder",
     },
   }));
@@ -28,7 +28,10 @@ function Header() {
     return (
         <React.Fragment>
             <AppBar position="static" color="transparent" elevation={0}>
-                <Grid container>
+                <Grid 
+                container   
+                justify="space-around"
+                alignItems="flex-start">
                     <Grid item>
                     <Toolbar>
                         <Typography variant="h5" className={classes.title}>
@@ -38,6 +41,12 @@ function Header() {
                     </Grid>
                     <Grid item>
                         <Toolbar>
+                            <Typography variant="h5" className={classes.rightToolbar}>
+                                About
+                            </Typography>
+                            <Typography variant="h5" className={classes.rightToolbar}>
+                                About
+                            </Typography>
                             <Typography variant="h5" className={classes.rightToolbar}>
                                 About
                             </Typography>

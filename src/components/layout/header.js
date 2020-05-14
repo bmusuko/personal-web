@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     },
     rightToolbar: {
         color:"#f5f5f5",
-        marginRight:24,
-        fontWeight:"bolder",
+        marginRight:30,
+        fontWeight:"bold",
     },
   }));
 
@@ -41,14 +41,14 @@ function Header() {
                     </Grid>
                     <Grid item>
                         <Toolbar>
-                            <Typography variant="h5" className={classes.rightToolbar}>
-                                About
+                            <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                About Me
                             </Typography>
-                            <Typography variant="h5" className={classes.rightToolbar}>
-                                About
+                            <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                Skill
                             </Typography>
-                            <Typography variant="h5" className={classes.rightToolbar}>
-                                About
+                            <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                Project
                             </Typography>
                         </Toolbar>
                     </Grid>

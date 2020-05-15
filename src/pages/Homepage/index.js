@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/layout/header'
-import Image from '../../assets/japannight.jpeg';
+import Image from '../../assets/japannight.jpg';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -70,17 +70,17 @@ function Homepage(){
                         alignItems="flex-end"
                         >
                             <Grid item sm={4} xs={4} style={styles.center}>
-                                <a href="https://twitter.com/bmusuko" target="_blank" rel="noreferrer">
+                                <a href="https://twitter.com/bmusuko" target="_blank" rel="noopener noreferrer">
                                     <TwitterIcon style={styles.icon} />
                                 </a>
                             </Grid>
                             <Grid item sm={4} xs={4} style={styles.center}>
-                                <a href="https://www.linkedin.com/in/bram-musuko-panjaitan-64410916a" target="_blank" rel="noreferrer">
+                                <a href="https://www.linkedin.com/in/bram-musuko-panjaitan-64410916a" target="_blank" rel="noopener noreferrer">
                                     <LinkedInIcon style={styles.icon} />
                                 </a>
                             </Grid>
                             <Grid item sm={4} xs={4} style={styles.center}>
-                                <a href="https://github.com/bmusuko/" target="_blank" rel="noreferrer">
+                                <a href="https://github.com/bmusuko/" target="_blank" rel="noopener noreferrer">
                                     <GitHubIcon style={styles.icon} />
                                 </a>
                             </Grid>

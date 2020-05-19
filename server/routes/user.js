@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const User = require('../models/User');
-const responseGenerator = require('../utils/responseGenerator');
+// const {login,register} = require('../controllers/auth');
+const {jwtMiddleware} = require('../utils/jwt');
 
-router.get('/login',(req,res)=>{
-    responseGenerator(res,200,"test!");
-})
+router.get('/',jwtMiddleware,(req,res)=>{
+    res.json("hi!");
+});
 
 module.exports = router;

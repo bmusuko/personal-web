@@ -7,10 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import AvatarUrl from '../../assets/ava.jpg';
+import Avatar from '@material-ui/core/Avatar';
 
 const styles = {
     paperContainer: {
-        // backgroundImage: `url(${Image})`,
         background:`linear-gradient(0deg, rgba(54, 54, 54, 0.9), rgba(54, 54, 54, 0.9)), url(${Image}) no-repeat center center fixed`,
         maxWidth: '100%',
         height: '100vh',  
@@ -37,9 +38,28 @@ const styles = {
     },
     maxWidth:{
         width:'100%',
-    }
+    },
+    paperAbout: {
+        background: '#189ad3',
+    },
+    large: {
+        width: '200px',
+        height: '200px',
+        margin:'auto',
+        marginTop: '3rem'
+    },
+    description: {
+        margin:'auto',
+        marginTop: '1rem',
+        maxWidth:'36rem',
+        color: '#f5f5f5',
+        fontWeight: 'normal',
+        textAlign:'center',
+        fontSize: '1.25rem'
+    },
 };
 
+const description = "Computer Science student who currently studying in third year at Institut Teknologi Bandung. Highly passionate in technology especially programming. I'm currently interested in Node JS and React JS"
 
 function Homepage(){
     return(
@@ -59,7 +79,7 @@ function Homepage(){
                         </Typography>
                         <Typography variant="h2" align="center" style={styles.textColor}>
                            Computer Science Student
-                        </Typography>``
+                        </Typography>
                     </Grid>
                     <Grid item sm={12} style={styles.maxWidth}>
                         <Grid
@@ -88,9 +108,21 @@ function Homepage(){
                     </Grid>
                 </Grid>
             </Paper>
-            <div>
-                <h1>Hello boi</h1>
-            </div>
+            <Paper style={styles.paperAbout}>
+                <Grid
+                    container
+                    direction="row"
+                    alignItems="stretch">  
+                    <Grid item sm={12} justify="center" style={styles.maxWidth}>
+                        <Avatar alt="Remy Sharp" src={AvatarUrl} style={styles.large} justify="center" />
+                    </Grid>
+                    <Grid item sm={12} justify="center" style={styles.maxWidth}>
+                        <p variant="display" style={styles.description}>
+                            {description}         
+                        </p>                   
+                     </Grid>
+                </Grid>
+            </Paper>
         </React.Fragment>
     )
 }
@@ -98,3 +130,4 @@ function Homepage(){
 export default Homepage;
 
 // justify="space-between"
+

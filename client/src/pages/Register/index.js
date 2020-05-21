@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Image from '../../assets/japannight.jpg';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-
+import { ToastContainer} from 'react-toastify';
+// import Notification from '../../utils/Notification';
+// import { useHistory } from "react-router-dom";
 
 const styles = {
     paperContainer: {
@@ -45,8 +47,25 @@ const styles = {
 
 
 function RegisterPage(){
+    // const history = useHistory();
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleRegister = () => {
+        // Notification.success('Registration Success');
+        console.log(name,email,password);
+        if (name && email && password){
+            
+        }
+        // history.push('/login');
+    }
+
+
     return(
         <React.Fragment>
+            <ToastContainer />
             <Paper style={styles.paperContainer}>
                 <Grid
                     container
@@ -66,6 +85,7 @@ function RegisterPage(){
                                 label="Name"
                                 variant="filled"
                                 style={styles.inputField}
+                                onChange = { (e) => setName(e.target.value) }
                             />
                             <br />
                             <TextField
@@ -74,6 +94,7 @@ function RegisterPage(){
                                 label="email"
                                 variant="filled"
                                 style={styles.inputField}
+                                onChange = { (e) => setEmail(e.target.value) }
                             />
                             <br />
                             <TextField
@@ -84,9 +105,10 @@ function RegisterPage(){
                                 variant="filled"
                                 required
                                 style={styles.inputField}
+                                onChange = { (e) => setPassword(e.target.value) }
                             />
                         </form>
-                        <Button variant="contained" color="primary" style={styles.buttonField}>
+                        <Button variant="contained" color="primary" style={styles.buttonField} onClick={handleRegister}>
                             Submit
                         </Button>
                         <br />

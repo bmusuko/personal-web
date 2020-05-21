@@ -1,7 +1,9 @@
 import React from 'react';
-import Homepage from './pages/Homepage'
 import { createBrowserHistory } from "history";
 import {Router, Switch, Route} from 'react-router-dom';
+import HomePage from './pages/Homepage'
+import LoginPage from './pages/Login'
+import RegisterPage from './pages/Register'
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
     <Router history={history}>
       <div className="App">
         <Switch>
-          <Route exact path="/" component={Homepage} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/register" component={RegisterPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

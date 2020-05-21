@@ -23,8 +23,6 @@ const sign = (data) =>{
 }
 
 const authError = (err, req, res, next) => {
-    console.log(err);
-    console.log('hit');
     if(err.name === 'UnauthorizedError') {
         return responseGenerator(res,err.status,err.message);
     }

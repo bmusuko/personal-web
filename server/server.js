@@ -7,6 +7,7 @@ const {authError} = require('./utils/jwt');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// routes
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/user');
 
@@ -16,11 +17,10 @@ app.use(logger('common', {
     stream: fs.createWriteStream('./logs/access.log', {flags: 'a'})
 }));
 app.use(logger('dev'));
+
 // set up body parser
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-
-
 
 //connect to db
 require('./config/dbconn');
@@ -29,16 +29,13 @@ require('./config/dbconn');
 app.use('/auth',authRoute);
 app.use('/user',userRoute);
 
-// error middleware
+// unauthorized middleware
 app.use(authError);
 
 
 app.get('/',(req,res)=>{
-    res.json("hai");
+    res.json("hai"); // quick test running
 })
-
-
-
 
 // serve app
 app.listen(port, () => console.log(`server listening on port ${port}!`));

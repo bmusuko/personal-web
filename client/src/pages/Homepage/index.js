@@ -9,6 +9,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AvatarUrl from '../../assets/ava.jpg';
 import Avatar from '@material-ui/core/Avatar';
+import Container from '@material-ui/core/Container';
+import Experience from '../../components/Homepage/Experience'
 
 const styles = {
     paperContainer: {
@@ -40,7 +42,7 @@ const styles = {
         width:'100%',
     },
     paperAbout: {
-        background: '#189ad3',
+        background: '#384259',
     },
     large: {
         width: '200px',
@@ -50,21 +52,34 @@ const styles = {
     },
     description: {
         margin:'auto',
-        marginTop: '1rem',
+        marginTop: '0.5rem',
         maxWidth:'36rem',
         color: '#f5f5f5',
         fontWeight: 'normal',
         textAlign:'center',
-        fontSize: '1.25rem'
+        fontSize: '1.25rem',
+        marginBottom: '2rem'
+    },
+    about: {
+        margin:'auto',
+        marginTop: '1rem',
+        color: '#f5f5f5',
+        fontWeight: 'bolder',
+        textAlign:'center',
+        fontSize: '1.5rem'
+    },
+    project: {
+        paddingTop: '1rem',
+        color: '#363636',
+        fontWeight: 'bolder',
     },
 };
 
-const description = "Computer Science student who currently studying in third year at Institut Teknologi Bandung. Highly passionate in technology especially programming. I'm currently interested in Node JS and React JS"
-
+const description = `I'm a Computer Science student who currently studying in the third year at Institut Teknologi Bandung. Highly passionate about technology especially programming. I'm currently interested in Node JS and React JS`
 function Homepage(){
     return(
         <React.Fragment>
-            <Paper style={styles.paperContainer}>
+            <Paper square style={styles.paperContainer}>
                 <Grid
                     container
                     direction="row"
@@ -108,7 +123,7 @@ function Homepage(){
                     </Grid>
                 </Grid>
             </Paper>
-            <Paper style={styles.paperAbout}>
+            <Paper square style={styles.paperAbout} id="about">
                 <Grid
                     container
                     direction="row"
@@ -117,12 +132,22 @@ function Homepage(){
                         <Avatar alt="Remy Sharp" src={AvatarUrl} style={styles.large} justify="center" />
                     </Grid>
                     <Grid item sm={12} justify="center" style={styles.maxWidth}>
+                    <p variant="display" style={styles.about}>
+                            Hello there!         
+                        </p> 
                         <p variant="display" style={styles.description}>
                             {description}         
                         </p>                   
                      </Grid>
                 </Grid>
             </Paper>
+            <Paper square style={
+                    {background:"#7ac7c4"}
+                } id="experience">
+                <Container maxWidth="lg" >
+                    <Experience />
+                </Container>
+                </Paper>
         </React.Fragment>
     )
 }

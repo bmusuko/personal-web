@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Grid from '@material-ui/core/Grid';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const useStyles = makeStyles((theme) => ({
     menuButton: {
@@ -19,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
         color:"#f5f5f5",
         marginRight:30,
         fontWeight:"bold",
+    },
+    anchor: {
+        textDecoration:"none",
+        outline: "0"
     },
   }));
 
@@ -41,15 +46,16 @@ function Header() {
                     </Grid>
                     <Grid item>
                         <Toolbar>
-                            <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                About Me
-                            </Typography>
-                            <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                Skill
-                            </Typography>
-                            <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                Project
-                            </Typography>
+                            <AnchorLink href='#about' className={classes.anchor}>
+                                <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                    About Me
+                                </Typography>
+                            </AnchorLink>
+                            <AnchorLink href='#experience' className={classes.anchor}>
+                                <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                    Experience
+                                </Typography>
+                            </AnchorLink>
                         </Toolbar>
                     </Grid>
                 </Grid>

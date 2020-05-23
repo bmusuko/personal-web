@@ -12,10 +12,12 @@
     "dotenv": "^8.2.0",
     "font-awesome": "^4.7.0",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-toastify": "^6.0.5"
+    "react-toastify": "^6.0.5",
+    "react-vertical-timeline-component": "^2.6.2"
   },
   "scripts": {
     "start": "react-scripts start",

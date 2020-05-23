@@ -9,9 +9,8 @@
 ### Frontend
 - [x] Set script for deployment
 - [x] Landing Page
-- [ ] Rewrite in typescript
-- [ ] Education
-- [ ] Skill
+- [x] Experience
+- [ ] Achievement
 - [ ] Blog
 - [ ] Project
 - [ ] CV with google oauth
@@ -19,4 +18,3 @@
 
 ### Backend
 - [x] init and set up JWT 
-- [ ] Rewrite in typescript

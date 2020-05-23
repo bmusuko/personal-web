@@ -54,6 +54,8 @@ const styles = {
         margin:'auto',
         marginTop: '0.5rem',
         maxWidth:'36rem',
+        paddingLeft: '1.25rem',
+        paddingRight: '1.25rem',
         color: '#f5f5f5',
         fontWeight: 'normal',
         textAlign:'center',

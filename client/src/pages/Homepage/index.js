@@ -11,6 +11,8 @@ import AvatarUrl from '../../assets/ava.jpg';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import Experience from '../../components/Homepage/Experience'
+import Project from '../../components/Homepage/Project';
+import colors from '../../static/dracula';
 
 const styles = {
     paperContainer: {
@@ -23,14 +25,13 @@ const styles = {
     gridContainer: {
         height:'100%',
         flexGrow:1,
-        // backgroundColor:"rgba(255,0,0)"
     },
     textColor :{
-        color: '#f5f5f5',
+        color: colors.Foreground,
         fontWeight: 'bolder'
     },
     icon :{
-        color: '#f5f5f5',
+        color: colors.Foreground,
         paddingBottom:'3vh',
         textAlign:'center',
         fontSize: 40
@@ -42,7 +43,7 @@ const styles = {
         width:'100%',
     },
     paperAbout: {
-        background: '#384259',
+        background: colors.Background,
     },
     large: {
         width: '200px',
@@ -56,7 +57,7 @@ const styles = {
         maxWidth:'36rem',
         paddingLeft: '1.25rem',
         paddingRight: '1.25rem',
-        color: '#f5f5f5',
+        color: colors.Foreground,
         fontWeight: 'normal',
         textAlign:'center',
         fontSize: '1.25rem',
@@ -65,16 +66,24 @@ const styles = {
     about: {
         margin:'auto',
         marginTop: '1rem',
-        color: '#f5f5f5',
+        color: colors.Foreground,
         fontWeight: 'bolder',
         textAlign:'center',
         fontSize: '1.5rem'
     },
     project: {
         paddingTop: '1rem',
-        color: '#363636',
+        color: colors.Background,
         fontWeight: 'bolder',
     },
+    paperExperience:{
+        background:colors.Background,
+        paddingBottom:"3rem"
+    },
+    paperProject:{
+        background:colors.Background,
+        height:"100vh"
+    }
 };
 
 const description = `I'm a Computer Science student who currently studying in the third year at Institut Teknologi Bandung. Highly passionate about technology especially programming. I'm currently interested in Node JS and React JS`
@@ -143,13 +152,16 @@ function Homepage(){
                      </Grid>
                 </Grid>
             </Paper>
-            <Paper square style={
-                    {background:"#7ac7c4"}
-                } id="experience">
+            <Paper square style={styles.paperExperience} id="experience">
                 <Container maxWidth="lg" >
                     <Experience />
                 </Container>
-                </Paper>
+            </Paper>
+            <Paper style={styles.paperProject} square id="project">
+                <Container maxWidth="lg" >
+                    <Project />
+                </Container>
+            </Paper>
         </React.Fragment>
     )
 }

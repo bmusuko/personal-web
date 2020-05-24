@@ -1,6 +1,6 @@
 # Personal web
 
-- Deployed at : [preview.bmusuko.ninja](http://preview.bmusuko.ninja)
+- Deployed at : [bmusuko.ninja](http://bmusuko.ninja)
 - Techstack :
     - React JS
     - Nginx 

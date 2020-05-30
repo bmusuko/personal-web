@@ -82,7 +82,7 @@ const styles = {
     },
     paperProject:{
         background:colors.Background,
-        height:"100vh"
+        paddingBottom:"3rem"
     }
 };
 

@@ -1,0 +1,15 @@
+.card{
+    /* min-width :275px; */
+    /* max-width : 500px; */
+    margin:auto;
+    display: block;
+    background-color: #f8f8f2!important;
+}
+
+.slick-prev{
+    left:-5px;
+}
+
+.slick-next{
+    right:-5px;
+}

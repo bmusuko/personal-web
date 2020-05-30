@@ -8,9 +8,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import colors from '../../static/dracula';
 
 const useStyles = makeStyles((theme) => ({
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
     title: {
       color:colors.Foreground,
       fontWeight:"bolder",

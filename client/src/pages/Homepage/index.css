@@ -1,0 +1,19 @@
+.Typewriter__wrapper{
+    color:rgb(248, 248, 242);
+    font-weight:bolder;
+    width: 100%;
+    font-size: 3.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.00833em;   
+}
+
+.Typewriter__cursor{
+    color:rgb(248, 248, 242);
+    font-size: 3.75rem;
+}
+
+.Typewriter{
+    text-align: center;
+    min-width:100vw;
+}

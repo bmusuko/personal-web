@@ -13,6 +13,9 @@ import Container from '@material-ui/core/Container';
 import Experience from '../../components/Homepage/Experience'
 import Project from '../../components/Homepage/Project';
 import colors from '../../static/dracula';
+// import Footer from '../../components/layout/footer';
+import Typewriter from 'typewriter-effect';
+import './index.css';
 
 const styles = {
     paperContainer: {
@@ -82,11 +85,21 @@ const styles = {
     },
     paperProject:{
         background:colors.Background,
-        paddingBottom:"3rem"
-    }
+        paddingBottom:"3rem",
+        marginBottom:"-2rem"
+    },
+    // paperFooter:{
+    //     background:colors.Selection,
+    //     paddingBottom:"3rem",
+    // }
 };
 
 const description = `I'm a Computer Science student who currently studying in the third year at Institut Teknologi Bandung. Highly passionate about technology especially programming. I'm currently interested in Node JS and React JS`
+const typewriterOption = {
+    strings: ['Computer Science Student', 'Software Developer Intern'],
+    autoStart: true,
+    loop: true,
+}
 function Homepage(){
     return(
         <React.Fragment>
@@ -103,9 +116,9 @@ function Homepage(){
                         <Typography variant="h5" align="center" style={styles.textColor}>
                            I'm a
                         </Typography>
-                        <Typography variant="h2" align="center" style={styles.textColor}>
-                           Computer Science Student
-                        </Typography>
+                        <Typewriter
+                            options={typewriterOption}
+                            />
                     </Grid>
                     <Grid item sm={12} style={styles.maxWidth}>
                         <Grid
@@ -160,6 +173,11 @@ function Homepage(){
             <Paper style={styles.paperProject} square id="project">
                 <Container maxWidth="lg" >
                     <Project />
+                </Container>
+            </Paper>
+            <Paper style={styles.paperFooter} square id="footer">
+                <Container maxWidth="lg" >
+                    {/* <Footer /> */}
                 </Container>
             </Paper>
         </React.Fragment>

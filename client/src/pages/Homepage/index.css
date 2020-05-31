@@ -1,7 +1,8 @@
+
+
 .Typewriter__wrapper{
     color:rgb(248, 248, 242);
     font-weight:bolder;
-    width: 100%;
     font-size: 3.75rem;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 1.2;
@@ -15,5 +16,5 @@
 
 .Typewriter{
     text-align: center;
-    min-width:100vw;
-}
+    width: 100vw;
+    max-width:100%;}

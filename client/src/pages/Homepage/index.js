@@ -35,7 +35,7 @@ const styles = {
     },
     icon :{
         color: colors.Foreground,
-        paddingBottom:'3vh',
+        paddingBottom:'3rem',
         textAlign:'center',
         fontSize: 40
     },

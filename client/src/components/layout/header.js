@@ -6,23 +6,28 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Grid from '@material-ui/core/Grid';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import colors from '../../static/dracula';
+import Hidden from '@material-ui/core/Hidden';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
     title: {
       color:colors.Foreground,
-      fontWeight:"bolder",
-      marginRight: 16,
-      marginLeft: -12,    
+      fontWeight:"bolder",    
     },
     rightToolbar: {
         color:colors.Foreground,
-        marginRight:30,
+        marginRight:"2rem",
         fontWeight:"bold",
     },
     anchor: {
         textDecoration:"none",
         outline: "0"
     },
+    menuIcon:{
+        fontSize:'1.5rem',
+        color:colors.Foreground
+    }
   }));
 
 
@@ -34,7 +39,7 @@ function Header() {
             <AppBar position="static" color="transparent" elevation={0}>
                 <Grid 
                 container   
-                justify="space-around"
+                justify="space-between" 
                 alignItems="flex-start">
                     <Grid item>
                     <Toolbar>
@@ -45,21 +50,28 @@ function Header() {
                     </Grid>
                     <Grid item>
                         <Toolbar>
-                            <AnchorLink href='#about' className={classes.anchor}>
-                                <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                    About Me
-                                </Typography>
-                            </AnchorLink>
-                            <AnchorLink href='#experience' className={classes.anchor}>
-                                <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                    Experience
-                                </Typography>
-                            </AnchorLink>
-                            <AnchorLink href='#project' className={classes.anchor}>
-                                <Typography variant="subtitle1" className={classes.rightToolbar}>
-                                    Project
-                                </Typography>
-                            </AnchorLink>
+                            <Hidden smDown>
+                                <AnchorLink href='#about' className={classes.anchor}>
+                                    <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                        About Me
+                                    </Typography>
+                                </AnchorLink>
+                                <AnchorLink href='#experience' className={classes.anchor}>
+                                    <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                        Experience
+                                    </Typography>
+                                </AnchorLink>
+                                <AnchorLink href='#project' className={classes.anchor}>
+                                    <Typography variant="subtitle1" className={classes.rightToolbar}>
+                                        Project
+                                    </Typography>
+                                </AnchorLink>
+                            </Hidden>
+                            <Hidden mdUp>
+                                <IconButton>
+                                    <MenuIcon className={classes.menuIcon} />
+                                </IconButton>
+                            </Hidden>
                         </Toolbar>
                     </Grid>
                 </Grid>

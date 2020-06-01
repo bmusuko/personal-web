@@ -42,6 +42,16 @@ const styles = {
     center:{
         textAlign:'center'
     },
+    left:{
+        textAlign:'left',
+        paddingLeft:'3rem'
+        
+    },
+    right:{
+        textAlign:'right',
+        paddingRight:'3rem'
+
+    },
     maxWidth:{
         width:'100%',
     },
@@ -104,6 +114,8 @@ function Homepage(){
     return(
         <React.Fragment>
             <Paper square style={styles.paperContainer}>
+            <Container maxWidth="lg" style={styles.gridContainer}>
+
                 <Grid
                     container
                     direction="row"
@@ -125,10 +137,10 @@ function Homepage(){
                         container
                         direction="row"
                         style={styles.gridContainer}
-                        justify="space-around"
+                        justify="space-between"
                         alignItems="flex-end"
                         >
-                            <Grid item sm={4} xs={4} style={styles.center}>
+                            <Grid item sm={4} xs={4} style={styles.left}>
                                 <a href="https://twitter.com/bmusuko" target="_blank" rel="noopener noreferrer">
                                     <TwitterIcon style={styles.icon} />
                                 </a>
@@ -138,7 +150,7 @@ function Homepage(){
                                     <LinkedInIcon style={styles.icon} />
                                 </a>
                             </Grid>
-                            <Grid item sm={4} xs={4} style={styles.center}>
+                            <Grid item sm={4} xs={4} style={styles.right}>
                                 <a href="https://github.com/bmusuko/" target="_blank" rel="noopener noreferrer">
                                     <GitHubIcon style={styles.icon} />
                                 </a>
@@ -146,6 +158,7 @@ function Homepage(){
                         </Grid>
                     </Grid>
                 </Grid>
+                </Container>
             </Paper>
             <Paper square style={styles.paperAbout} id="about">
                 <Grid

@@ -23,7 +23,8 @@ const styles = {
         maxWidth: '100%',
         height: '100vh',  
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        overflowX: 'hidden'
     },
     gridContainer: {
         height:'100%',
@@ -198,6 +199,4 @@ function Homepage(){
 }
 
 export default Homepage;
-
-// justify="space-between"
 

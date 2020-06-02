@@ -60,6 +60,7 @@ const projectCard = projectData.map((project)=>{
             <Typography  variant="subtitle2" style={styles.cardTitle}>
               Stack : {project.stack}
             </Typography>
+            {project.github === '' ? '' : 
             <Grid
               container
               direction="row"
@@ -71,10 +72,11 @@ const projectCard = projectData.map((project)=>{
               </Grid>
               <Grid item>
                 <Typography  variant="body2" style={styles.cardGit}>
-                  {project.github === '' ? '-' : <a href={project.github} target="_blank" rel="noopener noreferrer">{project.github}</a>}
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">{project.github}</a>
                 </Typography>
               </Grid>
             </Grid>
+            }
           </CardContent>
         </Card>
       </Tilt>

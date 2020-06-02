@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 import Experience from '../../components/Homepage/Experience'
 import Project from '../../components/Homepage/Project';
 import colors from '../../static/dracula';
-// import Footer from '../../components/layout/footer';
+import Footer from '../../components/layout/footer';
 import Typewriter from 'typewriter-effect';
 import './index.css';
 
@@ -97,12 +97,13 @@ const styles = {
     paperProject:{
         background:colors.Background,
         paddingBottom:"3rem",
-        marginBottom:"-2rem"
+        // marginBottom:"-2rem"
     },
-    // paperFooter:{
-    //     background:colors.Selection,
-    //     paddingBottom:"3rem",
-    // }
+    paperFooter:{
+        background:'black',
+        paddingTop:'0.5rem',
+        paddingBottom:'0.5rem',
+    }
 };
 
 const description = `I'm a Computer Science student who currently studying in the third year at Institut Teknologi Bandung. Highly passionate about technology especially programming. I'm currently interested in Node JS and React JS`
@@ -190,9 +191,7 @@ function Homepage(){
                 </Container>
             </Paper>
             <Paper style={styles.paperFooter} square id="footer">
-                <Container maxWidth="lg" >
-                    {/* <Footer /> */}
-                </Container>
+                <Footer />
             </Paper>
         </React.Fragment>
     )

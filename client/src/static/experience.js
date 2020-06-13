@@ -1,6 +1,13 @@
 const experience = 
 [
     {
+        "title": "Software Developer Intern",
+        "company":"GDP Labs",
+        "location": "Greater Jakarta Area, Indonesia",
+        "date": "June 2020 – present",
+        "type" : "work"
+    },
+    {
         "title": "Computer Science Bachelor's degree",
         "company":"Institut Teknologi Bandung",
         "location": "Bandung Area, West Java, Indonesia",
